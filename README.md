@@ -8,6 +8,9 @@ Azure Kubernetes Deployment with Tailscale Network Integration
 > This assumes you have the Azure CLI and kubectl installed and configured on your local machine. Plus, you need to have an Azure account and Subscription along with a Tailscale account and be able to generate an auth key.
 
 
+![AKS + Tailscale Diagram](img/diagram.png)
+
+
 ## Deploy
 
 After creating a Resource Group, login using `az login` and deploy with the Bicep using the following command:
@@ -106,3 +109,13 @@ Now update kubectl to use your new Tailscale-based connection. Run the following
 kubectl config set-cluster aks-tailscale \
   --server=https://aks-cluster.<YOUR TAILNET>.ts.net
 ```
+
+You can now run the following command to see the nodes in your AKS cluster:
+
+```sh
+kubectl get nodes
+```
+
+You can also ping the Tailscale URL or IP addresses of the nodes in your cluster to verify connectivity. You can find the IP addresses in the output of the `kubectl describe proxygroup aks-cluster` command above.
+
+![kubectl get nodes command](img/get_nodes.png)
