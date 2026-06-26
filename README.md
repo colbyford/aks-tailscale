@@ -1,6 +1,6 @@
 # AKS + Tailscale
 
-<h3 align="right">Colby T. Ford, Ph.d.</h3>
+<h3 align="right">Colby T. Ford, Ph.D.</h3>
 
 Azure Kubernetes Deployment with Tailscale Network Integration
 
