@@ -4,6 +4,9 @@
 
 Azure Kubernetes Deployment with Tailscale Network Integration
 
+- Accompanying Blog Post: https://blog.colbyford.com/connecting-azure-kubernetes-clusters-to-tailscale-networks-87a2f9028851
+
+
 > [!NOTE]
 > This assumes you have the Azure CLI and kubectl installed and configured on your local machine. Plus, you need to have an Azure account and Subscription along with a Tailscale account and be able to generate an auth key.
 
